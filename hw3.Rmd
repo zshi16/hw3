@@ -1,0 +1,10 @@
+---
+title: "hw3"
+author: "Zecheng Shi"
+date: "2/14/2020"
+output: html_document
+---
+```{r}
+data<-read.csv("/Users/zes/Desktop/australian_athlete_data.csv", header = T)
+data$cat<-ifelse(data$sport %in% c("Row","Swim","T_400","W_polo"),"water sports","non-water sports")
+```
