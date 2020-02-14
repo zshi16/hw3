@@ -11,4 +11,5 @@ data$cat<-ifelse(data$sport %in% c("Row","Swim","T_400","W_polo"),"water sports"
 
 haha2
 haha3
+haha4
 ```
