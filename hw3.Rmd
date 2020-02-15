@@ -7,8 +7,14 @@ output: html_document
 ```{r}
 data<-read.csv("/Users/zes/Desktop/australian_athlete_data.csv", header = T)
 data$cat<-ifelse(data$sport %in% c("Row","Swim","T_400","W_polo"),"water sports","non-water sports")
+```
 
 
-haha2
-haha3
+2. Create the correlation matrix and scatterplot matrix between the outcomes.
+```{r}
+which(names(data) == "sport")
+data1 <- data[,-14]
+data1m <- as.matrix(data1[,c("bmi", "lbm" , "ht", "wt")])
+cor(data1m)
+pairs(data1[,c("bmi", "lbm" , "ht", "wt")])
 ```
